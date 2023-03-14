@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+  - name: dbt_bigquery
+    tables:
+      - name: chicago_taxi_trips

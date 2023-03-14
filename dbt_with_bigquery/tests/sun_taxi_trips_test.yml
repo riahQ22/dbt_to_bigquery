@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: sun_taxi_trips
+    columns:
+      - name: company
+        tests:
+          - accepted_values:
+              values: ['Sun Taxi']
+    
+
+    

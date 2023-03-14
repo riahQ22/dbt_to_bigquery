@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: taxi_trips
+    columns:
+      - name: payment_type
+        tests:
+          - accepted_values:
+              values: ['Cash', 'Credit Card']
+    

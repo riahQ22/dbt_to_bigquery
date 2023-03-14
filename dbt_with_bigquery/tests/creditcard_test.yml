@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: payment_creditcard_trip
+    columns:
+      - name: payment_type
+        tests:
+          - accepted_values:
+              values: ['Credit Card']
+       - name: trip_total 
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 10

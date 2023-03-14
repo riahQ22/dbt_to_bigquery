@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: metro_Jet_Taxi A_summary2019
+    columns:
+      - name: company
+        tests:
+          - accepted_values:
+              values: ['Metro Jet Taxi A']
+      - name: trip_start_timestamp
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: ['2019-01-01']
+              max_value: ['2019-12-31']
+
+    
